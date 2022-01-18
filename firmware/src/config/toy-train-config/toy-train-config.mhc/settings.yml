@@ -1,0 +1,14 @@
+configName: toy-train-config
+folderName: toy-train-v2.1
+format_version: v1.0
+frameworkPath: ../../../harmony
+processor: ATSAMD21G18A
+projectName: toy-train-v2.1
+settings:
+  PackageFilter: core_apps_sam_d21_da1;csp_apps_sam_d21_da1;bsp;quick_docs;core;csp;dev_packs;usb
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: ./dev_packs/arm/CMSIS/5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: ./dev_packs/Microchip/SAMD21_DFP/3.4.116/samd21a/atdf/ATSAMD21G18A.atdf
