@@ -23,7 +23,6 @@
 #define HALL_SENSOR_IDLE_TIME                               200
 #define HALL_SENSOR_INERTIA                                 200
 #define PHOTO_DIODE_INTERVAL_FROM_LAST_READ_10MS            10000
-
 #define CAR_WASH_WAIT_TIME                                  5000
 
 
@@ -41,14 +40,11 @@
 #define DEFAULT_MUSIC_TIMEOUT_MS 1000
 
 
-
-extern volatile uint16_t adcValue ;   
-extern volatile uint8_t global_hallReasultWaitCounter ;
-extern volatile uint8_t global_hallSensorInertiaCounter ;
-extern volatile uint16_t global_photoDiodeLastReadInterval ;
-extern volatile uint16_t global_carWashWaitTime ;
-extern volatile uint16_t global_defaultMusicTimeout;
-   
+extern volatile uint8_t  g_HallReasultWaitCounter;
+extern volatile uint8_t  g_HallSensorInertiaCounter ;
+extern volatile uint16_t g_PhotoDiodeLastReadInterval ;
+extern volatile uint16_t g_CarWashWaitTime ;
+extern volatile uint16_t g_DefaultMusicTimeout ;
     
 
 

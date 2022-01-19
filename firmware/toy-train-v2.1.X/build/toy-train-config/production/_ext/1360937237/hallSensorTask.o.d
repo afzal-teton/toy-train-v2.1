@@ -79,7 +79,6 @@ build/toy-train-config/production/_ext/1360937237/hallSensorTask.o: \
  ../src/config/toy-train-config/peripheral/port/plib_port.h \
  ../src/config/toy-train-config/peripheral/clock/plib_clock.h \
  ../src/config/toy-train-config/peripheral/nvic/plib_nvic.h \
- ../src/config/toy-train-config/peripheral/systick/plib_systick.h \
  ../src/config/toy-train-config/peripheral/dmac/plib_dmac.h \
  ../src/config/toy-train-config/peripheral/adc/plib_adc.h \
  ../src/config/toy-train-config/peripheral/adc/plib_adc_common.h \
@@ -99,7 +98,7 @@ build/toy-train-config/production/_ext/1360937237/hallSensorTask.o: \
  ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/list.h \
- ../src/motorControl.h
+ ../src/AppGlobals.h ../src/hallSensor.h ../src/motorControl.h
 
 ../src/hallSensorTask.h:
 
@@ -261,8 +260,6 @@ build/toy-train-config/production/_ext/1360937237/hallSensorTask.o: \
 
 ../src/config/toy-train-config/peripheral/nvic/plib_nvic.h:
 
-../src/config/toy-train-config/peripheral/systick/plib_systick.h:
-
 ../src/config/toy-train-config/peripheral/dmac/plib_dmac.h:
 
 ../src/config/toy-train-config/peripheral/adc/plib_adc.h:
@@ -300,5 +297,9 @@ build/toy-train-config/production/_ext/1360937237/hallSensorTask.o: \
 ../src/third_party/rtos/FreeRTOS/Source/include/task.h:
 
 ../src/third_party/rtos/FreeRTOS/Source/include/list.h:
+
+../src/AppGlobals.h:
+
+../src/hallSensor.h:
 
 ../src/motorControl.h:

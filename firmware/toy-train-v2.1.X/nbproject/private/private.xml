@@ -3,13 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/colorDetect.h</file>
+            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/AppGlobals.h</file>
+            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/color.h</file>
+            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/printStr.h</file>
+            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/bleTask.h</file>
+            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/config/toy-train-config/peripheral/tcc/plib_tcc2.c</file>
+            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/color.c</file>
+            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/rgbLed.c</file>
+            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/config/toy-train-config/FreeRTOSConfig.h</file>
             <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/bleTask.c</file>
             <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/main.c</file>
+            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/rtosTask.h</file>
             <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/printStr.c</file>
-            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/AppGlobals.c</file>
-            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/photoDiodeTask.c</file>
-            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/colorDetect.c</file>
+            <file>file:/home/babu/work-zone/firmware/microchip/samd21/project/toy-train-v2.1/firmware/src/photoSensorTask.c</file>
         </group>
     </open-files>
 </project-private>

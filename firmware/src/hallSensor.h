@@ -26,10 +26,6 @@ typedef struct HallSensorParam{
 
 extern HallSensor hallSensor;
 
-//extern unsigned long noChangeDuration;
-//extern unsigned long lastCountValue;
-//extern unsigned long readDelay;
-
 
 extern void initHallSensor( uint8_t direction, uint8_t speed);
 extern uint8_t  measureHallSensorValue();

@@ -3,11 +3,6 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
-#include <stddef.h>                     // Defines NULL
-#include <stdbool.h>                    // Defines true
-#include <stdlib.h>                     // Defines EXIT_FAILURE
-#include <string.h>
 #include "definitions.h"                // SYS function prototypes
 #include "rgbLed.h"
 
@@ -29,13 +24,14 @@ int main ( void ){
     //WDT_Enable();
     SERCOM0_USART_Write("....toy-train v-2.1 . ..\n", 25);
     
-    initRGBPeripheral();
+    initRGBPeripheral();                //RGBsetColor(1);  //RGBsetColor(BLUE);
     initMotorPeripheral();
     initAudioPeripheral();
     
     initBleTask(BLE_TASK_PRIORITY);
     initPhotoTask(PHOTO_SENSOR_TASK_PRIORITY);
     initHallSensorTask(HALL_SENSOR_TASK_PRIORITY);
+    initSoftTimerTask(SOFT_TIMER_PRIORITY);
     
     vTaskStartScheduler();
 

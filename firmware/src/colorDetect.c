@@ -28,12 +28,12 @@
 ////------------------- Initialize Color Sensor ends ------------------//
 //
 ////------------------- Color Sensing function starts ------------------//
-void PDColorWrite (uint8_t red, uint8_t green, uint8_t blue){
-    red ?   pd_red_Clear()  : pd_red_Set();
-    blue ?  pd_blue_Clear() : pd_blue_Set() ;
-    green ? pd_green_Clear() : pd_green_Set() ;
-}
-//
+//void PDColorWrite (uint8_t red, uint8_t green, uint8_t blue){
+//    red ?   pd_red_Clear()  : pd_red_Set();
+//    blue ?  pd_blue_Clear() : pd_blue_Set() ;
+//    green ? pd_green_Clear() : pd_green_Set() ;
+//}
+////
 //uint8_t generateColor(){
 //    
 ////    char b_red[5]="";

@@ -1,6 +1,5 @@
-build/toy-train-config/production/_ext/1450520259/plib_systick.o: \
- ../src/config/toy-train-config/peripheral/systick/plib_systick.c \
- ../src/config/toy-train-config/device.h \
+build/toy-train-config/production/_ext/1360937237/color.o: ../src/color.c \
+ ../src/color.h ../src/printStr.h ../src/config/toy-train-config/device.h \
  /opt/microchip/mplabx/v6.00/packs/Microchip/SAMD21_DFP/3.5.132/samd21a/include/samd21g18a.h \
  /opt/microchip/mplabx/v6.00/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/core_cm0plus.h \
  /opt/microchip/mplabx/v6.00/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_version.h \
@@ -69,9 +68,11 @@ build/toy-train-config/production/_ext/1450520259/plib_systick.o: \
  ../src/config/toy-train-config/device_cache.h \
  ../src/config/toy-train-config/device.h \
  ../src/config/toy-train-config/toolchain_specifics.h \
- /opt/microchip/mplabx/v6.00/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h \
- ../src/config/toy-train-config/interrupts.h \
- ../src/config/toy-train-config/peripheral/systick/plib_systick.h
+ /opt/microchip/mplabx/v6.00/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h
+
+../src/color.h:
+
+../src/printStr.h:
 
 ../src/config/toy-train-config/device.h:
 
@@ -212,7 +213,3 @@ build/toy-train-config/production/_ext/1450520259/plib_systick.o: \
 ../src/config/toy-train-config/toolchain_specifics.h:
 
 /opt/microchip/mplabx/v6.00/packs/arm/CMSIS/5.4.0/CMSIS/Core/Include/cmsis_compiler.h:
-
-../src/config/toy-train-config/interrupts.h:
-
-../src/config/toy-train-config/peripheral/systick/plib_systick.h:

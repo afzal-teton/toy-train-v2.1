@@ -50,10 +50,10 @@ void accelerateMotor(){
     switch (motor.speed_flag){
       case (MOTOR_SPEED_MID):
         motorControl(motor.direction_flag, MOTOR_SPEED_MAX);
-      break;
+        break;
       case(MOTOR_SPEED_MIN):
         motorControl(motor.direction_flag, MOTOR_SPEED_MID);
-      break;
+        break;
       case(0):
         motorControl(motor.direction_flag, MOTOR_SPEED_MIN);
       break;
@@ -64,6 +64,8 @@ void accelerateMotor(){
   else{
     motorControl(MOTOR_FORWARD, MOTOR_SPEED_MIN);
   }
+  setHallNoReasultInterval();
+  setHallSensorReadDelay();
 }
 
 void decelerateMotor(){
@@ -80,14 +82,18 @@ void decelerateMotor(){
     default:
     break;
   }
+  setHallSensorReadDelay();
 }
 
 void reverseMotor(){
   motorControl(MOTOR_REVERSE, MOTOR_SPEED_MIN);
+  setHallNoReasultInterval();
+  setHallSensorReadDelay();
 }
 
 void stopMotor(){
   motorControl(MOTOR_FORWARD, 0);
+  setHallSensorReadDelay();
 }
 
 uint8_t getMotorDirection(){

@@ -25,7 +25,7 @@
 //extern PDColor pdColor;
 //
 //void PDInit();
-void PDColorWrite (uint8_t red, uint8_t green, uint8_t blue);
+//void PDColorWrite (uint8_t red, uint8_t green, uint8_t blue);
 //uint8_t generateColor();
 //uint8_t PDColourRead();
 
