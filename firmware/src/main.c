@@ -38,7 +38,7 @@ int main ( void ){
     while ( true ) {
         
     }
-    return ( EXIT_FAILURE );
+    return ( 1 );
 }
 
 

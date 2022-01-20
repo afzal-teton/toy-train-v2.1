@@ -5,7 +5,6 @@
 
 void TASK_sTimer(void* p){
     while(1){  
-        vTaskDelay(1);
         if(g_HallReasultWaitCounter > 0){
             g_HallReasultWaitCounter-- ;
         }
@@ -21,9 +20,10 @@ void TASK_sTimer(void* p){
         if(g_DefaultMusicTimeout > 0){
             g_DefaultMusicTimeout-- ;
         }
+        vTaskDelay(1);
     }
 }
 void initSoftTimerTask(uint32_t priority){
-        xTaskCreate(TASK_sTimer, (signed char*)"pd_task", 512, 0, priority, NULL);
+        xTaskCreate(TASK_sTimer, (signed char*)"timer_task", 128, 0, priority, NULL);
 }
 

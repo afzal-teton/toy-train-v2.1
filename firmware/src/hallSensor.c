@@ -6,20 +6,20 @@ HallSensor hallSensor;
 
 
 void initHallSensor( uint8_t direction, uint8_t speed){
-    hallSensor.speedFlag = hall_speed_sense_pin_Get() ;
-    hallSensor.directionFlag = hall_dir_sense_pin_Get();
+    hallSensor.lastSpeed = hall_speed_sense_pin_Get() ;
+    hallSensor.lastDirection = hall_dir_sense_pin_Get();
     hallSensor.previousStatus = 0 ;
 }
 
 uint8_t  measureHallSensorValue(){
-    hallSensor.directionFlag = hall_dir_sense_pin_Get();
-    if(hall_speed_sense_pin_Get() != hallSensor.speedFlag){   
+    hallSensor.lastDirection = hall_dir_sense_pin_Get();
+    if(hall_speed_sense_pin_Get() != hallSensor.lastSpeed){   
         setHallNoReasultInterval();
-        hallSensor.speedFlag = 1 -  hallSensor.speedFlag ;
+        hallSensor.lastSpeed = 1 -  hallSensor.lastSpeed ;
         if(g_HallSensorInertiaCounter > 0){
             return 0;
         }
-        if(hallSensor.directionFlag){
+        if(hallSensor.lastDirection){
             return 2;
         }
         else{

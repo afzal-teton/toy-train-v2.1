@@ -1,6 +1,6 @@
 build/toy-train-config/production/_ext/1360937237/photoSensorTask.o: \
- ../src/photoSensorTask.c ../src/photoSensorTask.h ../src/bluetooth.h \
- ../src/rgbLed.h ../src/AppGlobals.h ../src/motorControl.h \
+ ../src/photoSensorTask.c ../src/photoSensorTask.h ../src/rgbLed.h \
+ ../src/AppGlobals.h ../src/motorControl.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h \
  ../src/config/toy-train-config/FreeRTOSConfig.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h \
@@ -102,8 +102,6 @@ build/toy-train-config/production/_ext/1360937237/photoSensorTask.o: \
  ../src/color.h ../src/printStr.h
 
 ../src/photoSensorTask.h:
-
-../src/bluetooth.h:
 
 ../src/rgbLed.h:
 

@@ -17,8 +17,8 @@
 
 
 typedef struct HallSensorParam{
-   uint8_t directionFlag;
-   uint8_t speedFlag;
+   uint8_t lastDirection;
+   uint8_t lastSpeed;
    uint8_t previousStatus ;
 } HallSensor;
 

@@ -8,7 +8,6 @@
 #ifndef PHOTOSENSORTASK_H
 #define	PHOTOSENSORTASK_H
 
-#include "bluetooth.h"
 #include "rgbLed.h"
 #include "motorControl.h"
 #include "AppGlobals.h"

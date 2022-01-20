@@ -92,8 +92,7 @@ build/toy-train-config/production/_ext/1360937237/main.o: ../src/main.c \
  ../src/bellMusic.h ../src/bleOnMusic.h ../src/bleOffMusic.h \
  ../src/carWashMusic.h ../src/hornMusic.h ../src/powerOneMusic.h \
  ../src/powerOffMusic.h ../src/sampleMusicOne.h ../src/sampleMusicTwo.h \
- ../src/rtosTask.h ../src/photoSensorTask.h ../src/bluetooth.h \
- ../src/motorControl.h \
+ ../src/rtosTask.h ../src/photoSensorTask.h ../src/motorControl.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h \
  ../src/config/toy-train-config/FreeRTOSConfig.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h \
@@ -312,8 +311,6 @@ build/toy-train-config/production/_ext/1360937237/main.o: ../src/main.c \
 ../src/rtosTask.h:
 
 ../src/photoSensorTask.h:
-
-../src/bluetooth.h:
 
 ../src/motorControl.h:
 

@@ -20,9 +20,9 @@
 #define YELLOW           5
 #define NO_COLOR         6
 
-#define HALL_SENSOR_IDLE_TIME                               200
+#define HALL_SENSOR_IDLE_TIME                               200u
 #define HALL_SENSOR_INERTIA                                 200
-#define PHOTO_DIODE_INTERVAL_FROM_LAST_READ_10MS            10000
+#define PHOTO_DIODE_INTERVAL_FROM_LAST_READ_10MS            10
 #define CAR_WASH_WAIT_TIME                                  5000
 
 
@@ -40,11 +40,11 @@
 #define DEFAULT_MUSIC_TIMEOUT_MS 1000
 
 
-extern volatile uint8_t  g_HallReasultWaitCounter;
-extern volatile uint8_t  g_HallSensorInertiaCounter ;
-extern volatile uint16_t g_PhotoDiodeLastReadInterval ;
-extern volatile uint16_t g_CarWashWaitTime ;
-extern volatile uint16_t g_DefaultMusicTimeout ;
+ extern uint8_t  g_HallReasultWaitCounter ;
+ extern uint8_t  g_HallSensorInertiaCounter  ;
+ extern uint16_t g_PhotoDiodeLastReadInterval ;
+ extern uint16_t g_CarWashWaitTime ;
+ extern uint16_t g_DefaultMusicTimeout ;
     
 
 

@@ -17,7 +17,7 @@
 
 
 #define BLE_TASK_PRIORITY              3
-#define PHOTO_SENSOR_TASK_PRIORITY     2
+#define PHOTO_SENSOR_TASK_PRIORITY     3
 #define HALL_SENSOR_TASK_PRIORITY      2
 #define SOFT_TIMER_PRIORITY            4
 

@@ -199,8 +199,6 @@
         <itemPath>../src/motorControl.h</itemPath>
         <itemPath>../src/AppGlobals.h</itemPath>
         <itemPath>../src/audio.h</itemPath>
-        <itemPath>../src/bluetooth.h</itemPath>
-        <itemPath>../src/colorDetect.h</itemPath>
         <itemPath>../src/hallSensor.h</itemPath>
         <itemPath>../src/rgbLed.h</itemPath>
         <itemPath>../src/printStr.h</itemPath>
@@ -303,8 +301,6 @@
       </logicalFolder>
       <logicalFolder name="f4" displayName="src" projectFiles="true">
         <logicalFolder name="f2" displayName="util" projectFiles="true">
-          <itemPath>../src/bluetooth.c</itemPath>
-          <itemPath>../src/colorDetect.c</itemPath>
           <itemPath>../src/printStr.c</itemPath>
           <itemPath>../src/sort.c</itemPath>
           <itemPath>../src/color.c</itemPath>

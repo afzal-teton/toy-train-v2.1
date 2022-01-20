@@ -51,7 +51,7 @@ uint8_t getColor(){
     static uint8_t lastColor = 0;
     static uint8_t colorCounter = 0 ;
     uint8_t resColor = generateColor(&pdColor);
-RGBsetColor(resColor);
+//RGBsetColor(resColor);
     if(lastColor != resColor){
         colorCounter = 0 ;
         lastColor = resColor;
@@ -76,36 +76,36 @@ void handleColor(uint8_t PDColorRes){
     else{
         PDNoColorCount = 0;
         if(PDLastColor != PDColorRes){
-            //RGBsetColor(PDColorRes);
+            RGBsetColor(PDColorRes);
             PDLastColor = PDColorRes;
             g_CarWashWaitTime = CAR_WASH_WAIT_TIME ;
             switch(PDColorRes){
                 case RED:
                     stopMotor();
-//                    setHallSensorReadDelay();
+                    setHallSensorReadDelay();
                     playAudio(MUSIC_HORN);
                     break;
                 case GREEN:
                     accelerateMotor();
-//                    setHallNoReasultInterval();
-//                    setHallSensorReadDelay();
+                    setHallNoReasultInterval();
+                    setHallSensorReadDelay();
                     playAudio(MUSIC_SAMPLE_ONE);
                     break;
                 case BLUE:
                     reverseMotor();
-//                    setHallNoReasultInterval();
-//                    setHallSensorReadDelay();
+                    setHallNoReasultInterval();
+                    setHallSensorReadDelay();
                     playAudio(MUSIC_BELL);
                     g_DefaultMusicTimeout = 0 ;
                     break;
                 case WHITE:
                     stopMotor();
-//                    setHallSensorReadDelay();
+                    setHallSensorReadDelay();
                     playAudio(MUSIC_CAR_WASH);
                     break;
                 case YELLOW:
                     decelerateMotor();
-//                    setHallSensorReadDelay();
+                    setHallSensorReadDelay();
                     playAudio(MUSIC_SAMPLE_TWO);
                     break;
                 default:
@@ -114,8 +114,8 @@ void handleColor(uint8_t PDColorRes){
         }
         else if(PDColorRes == WHITE && g_CarWashWaitTime==0){                   
             accelerateMotor();
-//            setHallNoReasultInterval();
-//            setHallSensorReadDelay();
+            setHallNoReasultInterval();
+            setHallSensorReadDelay();
             g_CarWashWaitTime = CAR_WASH_WAIT_TIME;
         }
     }
@@ -143,14 +143,14 @@ void TASK_photoSensor(void* p){
                 break;
             case(1):
                 pdColor.ambient = res ;
-                PDColorWrite(OFF, ON, OFF);
-                break;
-            case(2):
-                pdColor.green = res;
                 PDColorWrite(ON, OFF, OFF);
                 break;
-            case(3):
+            case(2):
                 pdColor.red = res;
+                PDColorWrite(OFF, ON, OFF);
+                break;
+            case(3):
+                pdColor.green = res;
                 PDColorWrite(OFF, OFF, ON);
                 break;
             case(4):
@@ -162,6 +162,7 @@ void TASK_photoSensor(void* p){
                 PDColorWrite(OFF, OFF, OFF);
                 resColor = getColor();
                 //RGBsetColor(resColor);
+                g_PhotoDiodeLastReadInterval = 0;
                 handleColor(resColor);
                 break;
             default:
@@ -169,7 +170,7 @@ void TASK_photoSensor(void* p){
             break;
         }
         samplingCycle++;
-        
+        vTaskDelay(1);
         ADC_Enable();
         DMAC_ChannelCallbackRegister(DMAC_CHANNEL_1, DmacCh0Cb, (uintptr_t)&myAppObj);
         DMAC_ChannelTransfer(DMAC_CHANNEL_1, (const void *)&ADC_REGS->ADC_RESULT, (const void *)adc_result_array, sizeof(adc_result_array));

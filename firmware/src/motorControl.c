@@ -33,11 +33,11 @@ void motorControl(int8_t direction, uint8_t speed){
   motor.speed_flag = speed;
   if (direction == MOTOR_FORWARD){
     TCC0_PWM24bitDutySet(TCC0_CHANNEL3, 0);
-    TCC0_PWM24bitDutySet(TCC0_CHANNEL2, speed);
+    TCC0_PWM24bitDutySet(TCC0_CHANNEL2, speed*8);
     //direction pin will be ground and speed pin will be pwm.  
   }
   else if(direction == MOTOR_REVERSE){
-    TCC0_PWM24bitDutySet(TCC0_CHANNEL3, speed);
+    TCC0_PWM24bitDutySet(TCC0_CHANNEL3, speed*8);
     TCC0_PWM24bitDutySet(TCC0_CHANNEL2, 0);
     //direction pin will be ground and speed pin will be pwm. 
   } 
@@ -64,8 +64,6 @@ void accelerateMotor(){
   else{
     motorControl(MOTOR_FORWARD, MOTOR_SPEED_MIN);
   }
-  setHallNoReasultInterval();
-  setHallSensorReadDelay();
 }
 
 void decelerateMotor(){
@@ -82,18 +80,14 @@ void decelerateMotor(){
     default:
     break;
   }
-  setHallSensorReadDelay();
 }
 
 void reverseMotor(){
   motorControl(MOTOR_REVERSE, MOTOR_SPEED_MIN);
-  setHallNoReasultInterval();
-  setHallSensorReadDelay();
 }
 
 void stopMotor(){
   motorControl(MOTOR_FORWARD, 0);
-  setHallSensorReadDelay();
 }
 
 uint8_t getMotorDirection(){

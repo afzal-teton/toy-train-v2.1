@@ -16,17 +16,17 @@ uint8_t generateColor(PDColor *PdColor){
     PdColor->green = (PdColor->green*100)/PdColor->white;
     PdColor->blue = (PdColor->blue*100)/PdColor->white;
 
-    print_int(PdColor->red, 3);
-    SERCOM0_USART_Write("::", 2);
-    print_int(PdColor->green, 3);
-    SERCOM0_USART_Write("::", 2);
-    print_int(PdColor->blue, 3);
-    SERCOM0_USART_Write("::", 2);
-    print_int(PdColor->white, 3);
-    SERCOM0_USART_Write("::", 2);
-    print_int(PdColor->ambient, 3);
-    SERCOM0_USART_Write("::", 2);
-    SERCOM0_USART_Write("....toy-train v-2.1 . ..\n", 25);
+//    print_int(PdColor->red, 3);
+//    SERCOM0_USART_Write("::", 2);
+//    print_int(PdColor->green, 3);
+//    SERCOM0_USART_Write("::", 2);
+//    print_int(PdColor->blue, 3);
+//    SERCOM0_USART_Write("::", 2);
+//    print_int(PdColor->white, 3);
+//    SERCOM0_USART_Write("::", 2);
+//    print_int(PdColor->ambient, 3);
+//    SERCOM0_USART_Write("::", 2);
+//    SERCOM0_USART_Write("....toy-train v-2.1 . ..\n", 25);
    
     if(PdColor->white < 200){
         return NO_COLOR;

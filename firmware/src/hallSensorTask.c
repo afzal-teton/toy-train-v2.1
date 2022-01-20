@@ -17,12 +17,16 @@ TaskHandle_t xHallSensorTaskHandler;
 static void TASK_hallSensor(void* p){
     uint8_t hallSensorRes = 0 ;
     
-    hallSensor.speedFlag = hall_speed_sense_pin_Get() ;
-    hallSensor.directionFlag = hall_dir_sense_pin_Get();
+    hallSensor.lastSpeed = hall_speed_sense_pin_Get() ;
+    hallSensor.lastDirection = hall_dir_sense_pin_Get();
     hallSensor.previousStatus = 0 ; 
     
     while(1){
         hallSensorRes = measureHallSensorValue();
+//        if(hallSensorRes){
+//                  RGBsetColor(hallSensorRes);
+//        }
+  
         switch(hallSensorRes){
             case(HALL_SENSE_FORWRD):
                 if(hallSensor.previousStatus != HALL_SENSE_FORWRD){
@@ -58,5 +62,7 @@ static void TASK_hallSensor(void* p){
 }
 
 void initHallSensorTask(uint32_t priority){  
-    xTaskCreate(TASK_hallSensor, (signed char*)"ble_task", 256, 0, priority, &xHallSensorTaskHandler);    
+    xTaskCreate(TASK_hallSensor, (signed char*)"hall_sensor_task", 256, 0, priority, &xHallSensorTaskHandler);    
 }
+
+
